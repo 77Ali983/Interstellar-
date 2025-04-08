@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedTech & Aero Plattform</title>
+    <style>
+      /* Grundstil für die Seite */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #444;
+      }
+      nav a {
+        color: #fff;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: block;
+      }
+      nav a:hover {
+        background-color: #555;
+      }
+      .hero {
+        background: url('https://via.placeholder.com/1500x500') center/cover no-repeat;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .content {
+        padding: 20px;
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      .section h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+      }
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 300px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+      /* Responsive Anpassung */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header und Navigation -->
+    <header>
+      <h1>MedTech & Aero Plattform</h1>
+      <p>Innovative Lösungen im 3D Druck, CNC, Laser Technologie & PCB Design</p>
+    </header>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">Über Uns</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+
+    <!-- Hero-Bereich -->
+    <div class="hero" id="home">
+      <h1>Willkommen in der Zukunft der Technologie!</h1>
+    </div>
+
+    <!-- Hauptinhalte -->
+    <div class="content">
+      <!-- Services -->
+      <section class="section" id="services">
+        <h2>Unsere Services</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>3D Druck in der Luft- und Raumfahrt</h3>
+            <p>Erfahrung und Expertise im 3D Druck, speziell für Anwendungen in der Luft- und Raumfahrt.</p>
+          </div>
+          <div class="card">
+            <h3>Medizintechnik</h3>
+            <p>Präzise Techniklösungen für medizinische Geräte und Prototypen.</p>
+          </div>
+          <div class="card">
+            <h3>CNC & Laser Technologie</h3>
+            <p>Modernste Maschinen und Verfahren für exakte Fertigung und Entwicklung.</p>
+          </div>
+          <div class="card">
+            <h3>PCB Design & Herstellung</h3>
+            <p>Von der Idee bis zur Serienfertigung – professionelle PCB-Entwicklung.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Über Uns -->
+      <section class="section" id="about">
+        <h2>Über Uns</h2>
+        <p>
+          Wir sind ein erfahrenes Team aus den Bereichen 3D-Druck, Medizintechnik, Luft- und Raumfahrt, CNC & Laser-Technologie sowie PCB-Design und -Herstellung. Unsere langjährige Expertise und unser umfangreiches Netzwerk ermöglichen es uns, innovative Lösungen zu entwickeln.
+        </p>
+      </section>
+
+      <!-- Kontakt -->
+      <section class="section" id="contact">
+        <h2>Kontakt</h2>
+        <form>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required /><br><br>
+          <label for="email">E-Mail:</label><br>
+          <input type="email" id="email" name="email" required /><br><br>
+          <label for="message">Nachricht:</label><br>
+          <textarea id="message" name="message" rows="4" required></textarea><br><br>
+          <button type="submit">Senden</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 MedTech & Aero Plattform. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- JavaScript für smooth scrolling -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
